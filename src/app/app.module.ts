@@ -9,21 +9,27 @@ import { ProfileComponent } from './components/router/profile/profile.component'
 
 //Routing 
 
-import {APP_ROUTING} from './app.routes'
+import { APP_ROUTING } from './app.routes'
 
+//Services 
+import { NavBarService } from './components/services/navbar.service';
+import { ProductService } from './components/services/product.service'
+import { ProductsComponent } from './components/router/products/products.component'
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomePageComponent,
     ProfileComponent,
+    ProductsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    APP_ROUTING
+    APP_ROUTING,
   ],
-  providers: [],
+  providers: [NavBarService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
