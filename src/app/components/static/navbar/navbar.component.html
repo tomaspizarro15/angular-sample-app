@@ -1,5 +1,6 @@
-<div class="container">
-    <ul class="items_list">
-      <li class="item" *ngFor = "let item of Items"><p>{{item.label}}</p></li>
-    </ul>
+<div class="navbar_component">
+  <ul class="items_list">
+    
+    <li class="item" *ngFor="let item of Items"><a [routerLink]="[item.ref]">{{item.label}}</a></li>
+  </ul>
 </div>

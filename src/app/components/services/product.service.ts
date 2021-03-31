@@ -57,5 +57,8 @@ export class ProductService {
     getProducts() {
         return this.Products;
     }
+    getProductByIndex(i: number) {
+        return this.Products[i]
+    }
 
 }

@@ -14,7 +14,8 @@ import { APP_ROUTING } from './app.routes'
 //Services 
 import { NavBarService } from './components/services/navbar.service';
 import { ProductService } from './components/services/product.service'
-import { ProductsComponent } from './components/router/products/products.component'
+import { ProductsComponent } from './components/router/products/products.component';
+import { ProductComponent } from './components/router/product/product.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { ProductsComponent } from './components/router/products/products.compone
     HomePageComponent,
     ProfileComponent,
     ProductsComponent,
-
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
