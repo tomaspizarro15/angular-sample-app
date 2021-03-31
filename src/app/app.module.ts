@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/static/navbar/navbar.component';
 import { SideDrawerComponent } from './components/static/side-drawer/side-drawer.component';
 import { HomePageComponent } from './components/router/home-page/home-page.component';
 import { ProfileComponent } from './components/router/profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 //Routing 
 
@@ -26,6 +27,7 @@ import { ProductComponent } from './components/router/product/product.component'
     ProductComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     APP_ROUTING,

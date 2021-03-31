@@ -11,7 +11,7 @@ interface Items {
 export class NavBarService {
 
     constructor() {
-        console.log("NavBar service is available")
+      
     }
 
     private NavBarItems: Items[] = [
