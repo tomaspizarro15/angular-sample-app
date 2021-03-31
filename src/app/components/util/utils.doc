@@ -1,0 +1,11 @@
+nav-list-component requirements 
+
+:> Items property Array : of Items  **Check Interface in ./services/navbar.service
+
+{
+    id : number, 
+    label : string, 
+    ref : string
+}
+
+return a certain amout of <li></li> element depending in 

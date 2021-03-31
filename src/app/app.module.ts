@@ -16,7 +16,10 @@ import { APP_ROUTING } from './app.routes'
 import { NavBarService } from './components/services/navbar.service';
 import { ProductService } from './components/services/product.service'
 import { ProductsComponent } from './components/router/products/products.component';
-import { ProductComponent } from './components/router/product/product.component'
+import { ProductComponent } from './components/router/product/product.component';
+import { NavListComponent } from './components/util/nav-list/nav-list.component';
+import { ListComponent } from './components/util/list/list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,8 @@ import { ProductComponent } from './components/router/product/product.component'
     ProfileComponent,
     ProductsComponent,
     ProductComponent,
+    NavListComponent,
+    ListComponent,
   ],
   imports: [
     FormsModule,

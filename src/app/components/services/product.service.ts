@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-
-
 interface Product {
     name: string
     id: number
@@ -8,12 +6,9 @@ interface Product {
     price: number
     owner: string
 }
-
 @Injectable()
-
 export class ProductService {
     constructor() {
-
     }
     private Products: Product[] = [
         {
