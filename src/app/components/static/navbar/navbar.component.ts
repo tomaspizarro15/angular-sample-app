@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, Input } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, Input, Output, EventEmitter } from '@angular/core';
 import { NavBarService } from './../../services/navbar.service';
 import { ProductService } from './../../services/product.service'
 @Component({
@@ -8,17 +8,21 @@ import { ProductService } from './../../services/product.service'
 })
 export class NavbarComponent implements OnInit, OnChanges {
 
+
+  //Outputs must be inicialized in Constructor Method
+  //Outputs retrieve information to the parent component
+  @Output() ConsoleSomething: EventEmitter<string>;
+
   constructor(private _navBarService: NavBarService, private _productService: ProductService) {
-
+    this.ConsoleSomething = new EventEmitter();
   }
-  @Input() Items: any[] = []
-  @Input() products: any[] = []
-
+  Items: any[] = []
+  products: any[] = []
   ngOnInit(): void {
     this.Items = this._navBarService.getItems();
   }
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes.currentValue  )
+    console.log(changes.currentValue)
   }
   navSearch(text: string) {
     this._productService.getProducts().map((product) => {
